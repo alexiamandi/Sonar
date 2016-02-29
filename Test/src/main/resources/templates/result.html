@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Spring Boot and Thymeleaf example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h4>Link:</h4>
+		<p th:text="${ok}" />
+<table>
+	<tr th:each="metric : ${metrics}">
+    <td th:text="${metric.id}">1</td>
+    <td><a th:href="|${link}overview?id=${metric.id}|" th:text="${metric.name}">Title ...</a></td>
+</tr>
+</table>
+</body>
+</html>
